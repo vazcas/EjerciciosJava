@@ -10,31 +10,32 @@ public class ejercicios{
         System.out.println("Los datos del empleado son: "+nombre+" "+edad);
 
         // ejerciccio 2
-        if(edad>=18){
+        Scanner sc = new Scanner(System.in);
+        int edad2 = sc.nextInt();
+        if(edad2>=18){
             System.out.println("Eres mayor de edad");
         }else{
             System.out.println("Eres menor de edad");
         }
 
         // ejercicio 3
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Nombre de usuario:");
-        String nombre2 = scanner.nextLine();
+        String nombre2 = sc.nextLine();
         System.out.println("Email de usuario:");
-        String email = scanner.nextLine();
+        String email = sc.nextLine();
 
         System.out.println("Los datos del usuario son: "+nombre2+" "+email);
 
         // ejercicio 4
 
-        int numero = scanner.nextInt();
+        int numero = sc.nextInt();
         while(numero != 5)
-            numero = scanner.nextInt();
+            numero = sc.nextInt();
         System.out.println("Fin del programa");
 
         // ejercicio 5
 
-        int numero2 = scanner.nextInt();
+        int numero2 = sc.nextInt();
 
         do{
             if(numero2 >=1 && numero2 <=50){
@@ -53,8 +54,10 @@ public class ejercicios{
         }
 
         // ejercicio 7 
-        for(int i=0; i < nombres.length; i++){
-            System.out.print(nombres[i]+", ");
+        for(String n : nombres){
+            System.out.println(n);
         }
+
+        sc.close();
     }
 }
